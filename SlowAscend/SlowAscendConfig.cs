@@ -12,8 +12,10 @@ namespace SlowAscend
     [Menu("Slow Ascent")]
     public class SlowAscendConfig : ConfigFile
     {
-        [Slider("Ascent Multiplier", 0.1f, 1.0f, DefaultValue = 0.35f)]
-        public float ascentMultiplier = 0.35f;
+        /// A ToggleAttribute is used to represent a checkbox in the options menu
+        /// and is backed by a bool.
+        [Slider("Ascent Multiplier", 0.1f, 1.0f, DefaultValue = 0.25f, Format = "{0:F2}", Step = 0.01f)]
+        public float ascentMultiplier = 0.25f;
 
     }
 }
