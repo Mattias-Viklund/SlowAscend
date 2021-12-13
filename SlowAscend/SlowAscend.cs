@@ -42,6 +42,9 @@ namespace SlowAscend
             if (param.y > 0)
             {
                 param.y *= SlowAscend.Config.ascentMultiplier;
+            } else if (param.y < 0)
+            {
+                param.y *= SlowAscend.Config.descentMultiplier;
             }
             return param;
 
